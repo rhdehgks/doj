@@ -20,23 +20,26 @@ repositories {
 
 dependencies {
 	// thymeleaf
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf'
 
 	// spring web
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
 
 	// lombok
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok' // activate annotation processing
+	compileOnly group: 'org.projectlombok', name: 'lombok'
+	annotationProcessor group: 'org.projectlombok', name: 'lombok' // activate annotation processing
 
 	// maria db
 	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.4.1'
 
 	// spring jpa
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+
+	// model mapper
+	implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.1.1'
 
 	// spring boot test
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
 }
 
 tasks.named('test') {

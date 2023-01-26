@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="member")
 @Getter
+@Setter
 public class Member {
 
     @Id
@@ -18,17 +19,14 @@ public class Member {
     private int id;
 
     @Column(name="nickname")
-    @Setter
     private String nickname;
 
     @Column(name="email")
     private String email;
 
     @Column(name="password")
-    @Setter
     private String password;
 
     @Column(name="member_role")
-    @Setter
     private MemberRole memberRole;
 }
